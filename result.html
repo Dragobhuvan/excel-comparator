@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparison Result</title>
+</head>
+<body>
+<h1 style="color:#FFEADD; text-align:center;">Comparison Result</h1>
+    {% if differences %}
+<table border="1" style="border-inline-color: black; border-collapse: collapse;">
+<tr>
+<th>Row</th>
+<th>Sheet1 Value</th>
+<th>Sheet2 Value</th>
+</tr>
+            {% for diff in differences %}
+<tr>
+<td>{{ diff.row }}</td>
+<td>{{ diff.sheet1_value }}</td>
+<td>{{ diff.sheet2_value }}</td>
+</tr>
+            {% endfor %}
+</table>
+    {% else %}
+<p>No differences found.</p>
+    {% endif %}
+<br>
+<a href="/">Back to Upload</a>
+</body>
+</html>
