@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Excel comparator</title>
+<style>
+    body{
+        justify-content:center;
+        align-items:center;
+        }
+    .container{
+        text-align: center;
+        background-color: #C3EDC0;
+        }
+</style>
+</head>
+<body>
+<div class = "container">
+<h1>Excel sheets comparator app</h1>
+<p>This app will read the excel files which contains two sheets and higlight the diffrences between two sheets.</p>
+</div>
+
+ 
+
+    <h1>Upload Excel Files</h1>
+    {% if error %}
+<p style="color: red;">{{ error }}</p>
+    {% endif %}
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="file" accept=".xlsx">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
